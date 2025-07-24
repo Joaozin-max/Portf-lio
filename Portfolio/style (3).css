@@ -1,0 +1,352 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primaria: #4f46e5;
+    --segundaria:#7c3aed;
+    --escuro:#0f172a;
+    --maisescuro:#0a0f1c;
+    --claro:#e2e8f0;
+    --vidro:#rgba(255, 255, 255, 0.1);
+}
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+.Navegação{
+    position: fixed;
+    top: 0;
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+.menu{
+    display: flex;
+    list-style:none ;
+    gap: 3rem;
+    justify-content: center;
+}
+   
+.MenuLink{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.MenuLink::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(90deg, var(--primaria), var(--segundaria));
+    transition: width 0.5s ease;
+}
+.MenuLink:hover::after{
+    width: 100%;
+}
+.foto{
+    width:21.875rem ;
+    height: 21.875rem;
+    box-shadow: 0 0 20px rgba(79, 70 , 229, 0.3);
+    border-radius: 50%;
+    border: 0.25rem solid var(--vidro);
+    animation: flutuar 5s ease-in-out infinite;
+
+}
+.Cabeçalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 1.25rem;
+}
+.Estudante{
+    font-size: 1.5rem;
+    color: var(--claro);
+    justify-content: center;
+}
+.Sobre{
+    padding: 6rem 2rem ;
+}
+
+
+.Sobre-titulo{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px ;
+    
+}
+
+.Sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.Sobre-paragrafo{
+    text-align: justify;
+    font-size: 1rem;
+}
+.Projetos{
+    padding: 6rem 2rem;
+
+}
+.ProjetosTitulos{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+.Projeto-card:hover{
+    box-shadow: 0 10px 20px rgba(78, 70, 229, 0.753);
+    transform:translateY(-10px) scale(1.03);
+}
+
+.Projeto-caixa{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)) ;
+    gap: 2rem;
+    max-width: 1200px;
+    margin:0 auto;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+}
+.Projeto-card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.Projetoimg{
+    height: 200px;
+    width:100% ;
+    object-fit: cover;
+}
+.descrição-projeto{
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 0.25rem;
+
+}
+.NOME-PROJETO{
+    margin-bottom: 5px;
+
+}
+.texto-projetos{
+    padding: 1.5rem;
+}
+.contatos{
+    padding: 6rem 2rem;
+    
+
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    
+
+}
+.Formulario{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+
+
+}
+.Campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+    
+
+
+}
+
+.Campo-form:focus{
+    border-color: var(--segundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+
+}
+.Grupo-form{
+    margin-bottom: 1.5rem;
+
+}
+
+.botão{
+    justify-items: center;
+    color:var(--claro);
+    background: var(--primaria);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+.botão:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.5);
+}
+
+.PARTICULAS{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at  10% 20%, var(--primaria) 0%, transparent 20%),
+    radial-gradient(circle at 10% 20%, var(--segundaria) 0%, transparent 20%),
+    var(--maisescuro)
+    ;
+}
+
+@keyframes flutuar{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.experiências{
+    padding: 6rem 2rem ;
+
+}
+.caixa-experiencias{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+
+}
+.texto-experiencias{
+    margin-top: 4rem;
+    text-align: justify;
+    font-size: 1rem;
+}
+.Data_e_empresa{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.Cargo{
+    font-size: 15px;
+}
+.Agora{
+    color:#a5a1f3;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.ano{
+    color:var(--claro);
+    font-size: 15px;
+
+}
+.caixa-experiencias1{
+
+padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    
+}
+.ano2{
+    color:var(--claro);
+    font-size: 15px;
+    font-weight: bold;
+}
+.stars {
+    display: flex;
+  }
+  
+  .star {
+    display: inline-block;
+    background-color: var(--primaria);
+    width: 0.9375rem;
+    height: 0.9375rem;
+    margin-bottom: 0.5rem;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  
+  .star:not(:last-child) {
+    margin-right: 4px;
+  }
+  .Conhecimentos-tecnicos{
+    padding: 6rem 2rem;
+  }
+
+  .colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    
+  }
+  
+  .coluna {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+  }
+  
+  .titulo-categoria {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .linha {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10rem;
+  }
+  
+  
