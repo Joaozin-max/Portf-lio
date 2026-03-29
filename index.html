@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio João Klaywe</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,27 +13,22 @@
     <div class="PARTICULAS"></div>
 
 
-    <nav class="Navegação">
-        <ul class="menu">
-            <li>
-                <a href="#Inicio" class="MenuLink">Inicio</a>
-            </li>
-            <li>
-                <a href="#Sobre" class="MenuLink">Sobre</a>
-            </li>
-            <li>
-                <a href="#Experiencias" class="MenuLink">Experiências</a>
-            </li>
-            <li>
-                <a href="#Ferramentas" class="MenuLink">Ferramentas</a>
-            </li>
-            <li>
-                <a href="#Projetos" class="MenuLink">Projetos</a>
-            </li>
-            <li>
-                <a href="#Contatos" class="MenuLink">Contatos</a>
-            </li>
-        </ul>
+<nav class="Navegação">
+    <div class="mobilemenu" onclick="toggleMenu()">
+        <div class="linha1"></div>
+        <div class="linha2"></div>
+        <div class="linha3"></div>
+    </div>
+
+    <ul class="menu">
+        <li><a href="#Inicio" class="MenuLink">Inicio</a></li>
+        <li><a href="#Sobre" class="MenuLink">Sobre</a></li>
+        <li><a href="#Experiencias" class="MenuLink">Experiências</a></li>
+        <li><a href="#Ferramentas" class="MenuLink">Ferramentas</a></li>
+        <li><a href="#Projetos" class="MenuLink">Projetos</a></li>
+        <li><a href="#Contatos" class="MenuLink">Contatos</a></li>
+    </ul>
+</nav>
     </nav>
 
     <!--Inicio-->
@@ -218,24 +213,7 @@
         </form>
     </section>
 
-    <script>
-
-        function EnviarZap(event) {
-            event.preventDefault();
-
-            const Nome = document.getElementById('Nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5511949374684';
-
-            const texto = `Olá! Me chamo ${Nome}, ${mensagem}`;
-            const msgformatada = encodeURIComponent(texto);
-
-            const url = `https://wa.me/${telefone}?text=${msgformatada}`;
-
-            console.log(url);
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="apps.js"></script>
 </body>
 
 
