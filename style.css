@@ -442,3 +442,114 @@ h2 {
 .menu li.active {
     animation: menuAnimation 0.5s ease forwards;
 }
+/* ===== CORREÇÃO VAR ===== */
+:root {
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MENU MOBILE MELHORADO ===== */
+@media (max-width: 999px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 100vh;
+        background: var(--maisescuro);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 200;
+    }
+
+    .menu li {
+        opacity: 0;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .mobilemenu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 300;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .Estudante {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .foto {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .Sobre-titulo,
+    .ProjetosTitulos,
+    h2 {
+        font-size: 2rem;
+    }
+
+    .Projeto-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .colunas {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .linha {
+        gap: 2rem;
+    }
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 480px) {
+
+    .Navegação {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .foto {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .Sobre,
+    .Projetos,
+    .contatos,
+    .experiências,
+    .Conhecimentos-tecnicos {
+        padding: 4rem 1rem;
+    }
+
+    .Formulario {
+        padding: 1.5rem;
+    }
+
+    .Projetoimg {
+        height: 150px;
+    }
+}
